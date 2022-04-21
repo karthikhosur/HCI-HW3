@@ -57,13 +57,13 @@
             if((x > 10 || y > 10 || x < -10 || y < -10) && z < 8 && z > -8){
                 //document.getElementById("change").innerHTML = "undo";
                 if (txtHistory.undo() !== undefined) {
-                textarea.value = txtHistory.undo();
+                    document.getElementById("undo").click();
                  }
             }
             else if(z < -9 || z > 9){
                 //document.getElementById("change").innerHTML = "redo";
                 if (txtHistory.redo() !== undefined) {
-                textarea.value = txtHistory.redo();
+                    document.getElementById("redo").click();
                 }
             }
                 // document.getElementById("change").innerHTML = "redo";
