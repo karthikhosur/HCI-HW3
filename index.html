@@ -28,6 +28,7 @@
             // Check if the new textarea value is different
             if (txtHistory.current() !== textarea.value) {
                 // Record the textarea value
+                
                 txtHistory.record(textarea.value,true)
             }
             console.log(txtHistory)
@@ -38,6 +39,7 @@
         }, 100)
         // The undo button
         document.querySelector("#undo").addEventListener('click', () => {
+            console.log(txtHistory.undo(true))
             if (txtHistory.undo(true) !== undefined) {
                 textarea.value = txtHistory.undo()
             }
@@ -54,15 +56,15 @@
             var frontToBack = event.beta;
             // document.getElementById("change").innerHTML = rot;
     
-            if(frontToBack<40){
+            if(frontToBack<27 && leftToRight < -20 ){
                 //document.getElementById("change").innerHTML = "undo";
-                
+                if(frontToBack>65 && leftToRight>2 ){
                 document.getElementById("undo").click();
-                 
+                }
             }
-            else if(leftToRight<10){
+            else if(frontToBack<0){
                 //document.getElementById("change").innerHTML = "redo";
-                
+                if(rotateDegrees>50){
                 document.getElementById("redo").click();
                 
             }
