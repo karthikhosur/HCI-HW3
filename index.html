@@ -55,15 +55,15 @@
     
             if((x > 10 || y > 10 || x < -10 || y < -10) && z < 8 && z > -8){
                 //document.getElementById("change").innerHTML = "undo";
-                if (txtHistory.undo() !== undefined) {
-                    document.getElementById("#undo").click();
-                 }
+                
+                document.getElementById("undo").click();
+                 
             }
             else if(z < -9 || z > 9){
                 //document.getElementById("change").innerHTML = "redo";
-                if (txtHistory.redo() !== undefined) {
-                    document.getElementById("#redo").click();
-                }
+                
+                document.getElementById("redo").click();
+                
             }
                 // document.getElementById("change").innerHTML = "redo";
             // if (rot-180 > 0){
