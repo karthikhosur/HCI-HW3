@@ -8,6 +8,7 @@
 
 ### Installation 
 ###### To extract the deviceorientation data through javascript the application should run on HTTPS
-###### Source: [Heading link] https://stackoverflow.com/questions/56514116/how-do-i-get-deviceorientationevent-and-devicemotionevent-to-work-on-safari
+###### Source:https://stackoverflow.com/questions/56514116/how-do-i-get-deviceorientationevent-and-devicemotionevent-to-work-on-safari
+
 `$ `
 
