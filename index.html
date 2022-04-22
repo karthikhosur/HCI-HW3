@@ -56,20 +56,20 @@
             
             // document.getElementById("change").innerHTML = rot;
     
-            if(leftToRight<-30 && check_transition == 1){
+            if(leftToRight<-22 && check_transition == 1){
                 //document.getElementById("change").innerHTML = "undo";
                 
                 document.getElementById("undo").click();
                 check_transition =0
             }
-            if(leftToRight>30 && check_transition == 1){
+            if(leftToRight>22 && check_transition == 1){
                 //document.getElementById("change").innerHTML = "redo";
                 
                 document.getElementById("redo").click();
                 check_transition =0
             }
 
-            if (leftToRight > -20 && leftToRight < 20) {
+            if (leftToRight > -13 && leftToRight < 13) {
                 check_transition = 1
             }
 
