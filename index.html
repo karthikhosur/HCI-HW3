@@ -47,7 +47,6 @@
                 textarea.value = txtHistory.redo()
             }
         })
-
         
         handleOrientationEvent = function(e) {
             var rotateDegrees = event.alpha;
@@ -62,12 +61,17 @@
                 document.getElementById("undo").click();
                 check_transition =0
             }
-            else if(leftToRight>45 && check_transition == 1){
+            if(leftToRight>45 && check_transition == 1){
                 //document.getElementById("change").innerHTML = "redo";
                 
                 document.getElementById("redo").click();
                 check_transition =0
             }
+
+            if (leftToRight > -20 && leftToRight < 20) {
+                check_transition = 1
+            }
+
                 // document.getElementById("change").innerHTML = "redo";
             // if (rot-180 > 0){
             //     window.alert("right");
