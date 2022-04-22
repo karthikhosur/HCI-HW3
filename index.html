@@ -60,12 +60,14 @@
                 
                 document.getElementById("undo").click();
                 check_transition =0
+                await sleep(2000);
             }
             if(leftToRight>45 && check_transition == 1){
                 //document.getElementById("change").innerHTML = "redo";
                 
                 document.getElementById("redo").click();
                 check_transition =0
+                await sleep(2000);
             }
 
             if (leftToRight > -20 && leftToRight < 20) {
