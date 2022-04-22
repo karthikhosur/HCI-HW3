@@ -13,3 +13,4 @@ Source:https://stackoverflow.com/questions/56514116/how-do-i-get-deviceorientati
 `// Clone the project and open the folder `
 `// Open the index.html File `
 
+The Application can be viewed at https://hci-hw-3-karthikhosur.vercel.app/
