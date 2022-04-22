@@ -21,7 +21,7 @@
         </span>
         </span>
         
-        <textarea class="form-control" id="input" style="height: 341px; width: 100%;"></textarea>
+        <textarea class="form-control" id="input" style="height: 120; width: 100%;"></textarea>
         <br>
 
         <div class="row">
@@ -29,8 +29,8 @@
             <button id="redo" style="margin: 5px;" class="btn btn-warning btn-lg col">redo</button>
         </div>
         <span class = "row">
-            <img src="./images/1.png" alt="" width="500" height="600">
-            <img src="./images/2.jpg" alt="" width="500" height="600">
+            <img src="./images/1.png" alt="" width="200" height="200">
+            <img src="./images/2.png" alt="" width="200" height="200">
 
         </span>
     </div>
@@ -64,14 +64,7 @@
             if (txtHistory.redo(true) !== undefined) {
                 textarea.value = txtHistory.redo()
             }
-        })
-        
-        
-
-      
-
-
-        
+        })        
         handleOrientationEvent = function(e) {
             const cb = document.querySelector('#handedness');
         
