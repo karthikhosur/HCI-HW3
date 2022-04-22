@@ -12,6 +12,7 @@
 
 <body>
     <div style="max-width: 800px;" class="container p-3">
+        
         <span><h6>Toggle to Enable Left Hand Use</h6></span>
         <span>
         <label class="switch">
@@ -19,8 +20,10 @@
             <span class="slider round"></span>
         </span>
         </span>
+        
         <textarea class="form-control" id="input" style="height: 341px; width: 100%;"></textarea>
         <br>
+
         <div class="row">
             <button id="undo" style="margin: 5px;" class="btn btn-danger btn-lg col">undo</button>
             <button id="redo" style="margin: 5px;" class="btn btn-warning btn-lg col">redo</button>
@@ -78,7 +81,7 @@
                 }
                 check_transition =0
             }
-            if(leftToRight>22 && check_transition == 1){
+            if(leftToRight>15 && check_transition == 1){
                 //document.getElementById("change").innerHTML = "redo";
                 if(cb.checked == true ){
                     document.getElementById("undo").click();
