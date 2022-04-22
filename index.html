@@ -48,11 +48,12 @@
             }
         })
         
+        check_transition = 1
         handleOrientationEvent = function(e) {
             var rotateDegrees = event.alpha;
             var leftToRight = event.gamma;
             var frontToBack = event.beta;
-            check_transition = 1
+            
             // document.getElementById("change").innerHTML = rot;
     
             if(leftToRight<-45 && check_transition == 1){
