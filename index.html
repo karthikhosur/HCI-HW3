@@ -7,12 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap.css">
 
-    <title>Motion Undo Redo</title>
+    <title>UndoRedo.js - Textarea Example</title>
 </head>
 
 <body>
     <div style="max-width: 800px;" class="container p-3">
-        
         <span><h6>Toggle to Enable Left Hand Use</h6></span>
         <span>
         <label class="switch">
@@ -20,23 +19,15 @@
             <span class="slider round"></span>
         </span>
         </span>
-        
         <textarea class="form-control" id="input" style="height: 341px; width: 100%;"></textarea>
         <br>
-
         <div class="row">
             <button id="undo" style="margin: 5px;" class="btn btn-danger btn-lg col">undo</button>
             <button id="redo" style="margin: 5px;" class="btn btn-warning btn-lg col">redo</button>
         </div>
-        <span class = "row">
-            <img src="./images/1.png" alt="" width="500" height="600">
-            <img src="./images/2.jpg" alt="" width="500" height="600">
-
-        </span>
     </div>
     <script src="./js/UndoRedo.js"></script>
     <script>
-        check_transition = 1
         // Require the library function
         const txtHistory = new window.UndoRedojs(5)
         // Get the textarea
@@ -66,18 +57,19 @@
             }
         })
         
-        
-
-      
-
-
+        check_transition = 1
         
         handleOrientationEvent = function(e) {
             const cb = document.querySelector('#handedness');
         
+            var rotateDegrees = event.alpha;
             var leftToRight = event.gamma;
-
+            var frontToBack = event.beta;
+            
+            // document.getElementById("change").innerHTML = rot;
+    
             if(leftToRight<-22 && check_transition == 1){
+                //document.getElementById("change").innerHTML = "undo";
                 if(cb.checked == true ){
                     document.getElementById("redo").click();
                 }
@@ -86,7 +78,8 @@
                 }
                 check_transition =0
             }
-            if(leftToRight>15 && check_transition == 1){
+            if(leftToRight>22 && check_transition == 1){
+                //document.getElementById("change").innerHTML = "redo";
                 if(cb.checked == true ){
                     document.getElementById("undo").click();
                 }
@@ -100,9 +93,17 @@
                 check_transition = 1
             }
 
+                // document.getElementById("change").innerHTML = "redo";
+            // if (rot-180 > 0){
+            //     window.alert("right");
+            // }else{
+            //     window.alert("left");
+            // }
          }
     
-         window.addEventListener('deviceorientation', handleDeviceOrientationEvent, false);
+         window.addEventListener('deviceorientation', handleOrientationEvent, false);
+
     
+        
     </script>
 </body>
